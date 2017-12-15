@@ -1,0 +1,272 @@
+/**index.wxss**/
+page{
+  width:100%;
+  height:100%;
+  background-color:#eeedf2;
+  padding:20rpx;
+  box-sizing:border-box;
+  position:relative;
+}
+scroll-view{
+  height:100%;
+  width:100%;
+}
+.totop{
+  position:fixed;
+  bottom:10%;
+  right:5%;
+  z-index:9999;
+}
+.totop image{
+  width:80rpx;
+  height:80rpx;
+}
+.head{
+  width:248rpx;
+  height:60rpx;
+  border-radius:10rpx;
+  background-color:rgba(236,107,65,0.8);
+  color:#fff;
+  line-height: 60rpx;
+  padding:10rpx 20rpx;
+  font-size:18px;
+  text-align:center;
+  font-weight:bolder;
+  position:fixed;
+  left:50%;
+  transform:translateX(-50%);
+  bottom:5%;
+}
+.ltitle{
+  margin-top:110rpx;
+  background-color:#fff;
+  width:98%;
+  height:80rpx;
+  line-height: 80rpx;
+  font-size:18px;
+  text-indent:20rpx;
+  font-family:'楷体';
+  font-weight:bolder;
+  text-align:center;
+}
+.img{
+  display:flex;
+  height:140rpx;
+  align-items:center;
+  position:relative;
+}
+.self{
+  display:inline-block;
+  padding-right:60rpx;
+  height:50rpx;
+  line-height:50rpx;
+  border-right:3px solid #ec6b41;
+  font-size:18px;
+  color:#b4b4b4;
+  position:absolute;
+  right:10rpx;
+  
+}
+.text{
+  padding:20rpx 30rpx;
+  padding-right:0;
+  margin-bottom:10rpx;
+  font-size:16px;
+  font-weight:normal;
+  font-family:'楷体';
+  color:#333333;
+  display:flex;
+  flex-flow:row nowrap;
+  
+}
+.text .submit{
+  display:inline-block;
+  width:100rpx;
+  height:80rpx;
+  line-height: 80rpx;
+  text-align:right;
+  font-size:20px;
+  font-weight:normal;
+  font-family: '楷体';
+  margin-right:10rpx;
+  /* border:1px solid black; */
+}
+.loading{
+  display:flex;
+  align-items:center;
+  padding:0 20rpx;
+  padding-left:50rpx;
+}
+.loadtxt{
+  color:#666;
+  font-family: '楷体';
+  margin-left:20rpx;
+}
+.loadimg{
+  width:100rpx;
+  height:90rpx;
+  border:2px solid #e0e0e0;
+  text-align:center;
+  margin-top:10rpx;
+}
+.loadedimg{
+  width:120rpx;
+  height:110rpx;
+  text-align:center;
+  margin-top:10rpx;
+  margin-left:50rpx;
+}
+.loadedimg image{
+  display:inline-block;
+  width:110rpx;
+  height:110rpx;
+}
+.loadimg image{
+  display:inline-block;
+  width:80rpx;
+  height:80rpx;
+}
+.headimg{
+  display:inline-block;
+  width:100rpx;
+  height:100rpx;
+  border-radius:50rpx;
+  border:1px solid #ccc;
+}
+.follow{
+  display:inline-block;
+  width:40rpx;
+  height:40rpx;
+  margin-left:10rpx;
+}
+.submit{
+  padding-top:20rpx;
+  border-top:3px solid #f5f5f5;
+  display:flex;
+  flex-flow:row nowrap;
+  align-items:center;
+  justify-content:center;
+}
+.edit-cancel, .edit-submit{
+  padding:10rpx 20rpx;
+  background-color:#7dd6ff;
+  color:#fff;
+  font-size:20px;
+  font-weight:normal;
+  font-family: '楷体';
+  margin-right:20rpx;
+}
+.time{
+  margin-top:10px;
+  padding-top:20rpx;
+  border-top:3px solid #f5f5f5;
+}
+.time image{
+  display:inlne-block;
+  width:40rpx;
+  height:40rpx;
+  margin-right:10rpx;
+}
+.time text{
+  color:#cdcdcd;
+}
+ul{
+  width:100%;
+  margin-top:20rpx;
+}
+
+li{
+  display:inline-block;
+  width:100%;
+  height:auto;
+  background-color:#fff;
+  margin:10rpx 0;
+  padding:20rpx;
+  padding-bottom:30rpx;
+  box-sizing:border-box;
+   /* border-bottom-right-radius:25%; */
+  overflow:hidden;
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tip{
+  padding:10rpx 0;
+  padding-left:50rpx;
+  padding-right:20rpx;
+  /* border-bottom:2rpx dashed #f5f5f5; */
+}
+.desc{
+  padding:0 30rpx;
+}
+.desc image{
+  display:inline-block;
+  width:100%;
+  height:350rpx;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+.show-btn {
+  margin-top: 100rpx;
+  color: #22cc22;
+}
+.input {
+  display:inline-block;
+  width: 90%;
+  height: 82rpx;
+  font-weight:normal;
+  font-size: 20px;
+  line-height: 28rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  font-family:'楷体';
+  color: #333;
+  /* border:1px solid #ccc; */
+}
+
+input-holder {
+  color: #999999;
+  font-family:'楷体';
+  font-weight:normal;
+  /* font-size: 20px; */
+}
+
+ 
+ .isLoad{
+   display:flex;
+   flex-flow:row nowrap;
+   align-items:center;
+   justify-content:center;
+   height:80rpx;
+ }
+
+.aniImg{  
+  display: inline-block;
+  margin-right: 10rpx;  
+  width: 60rpx;  
+  height: 60rpx;
+}
+.aniImg image{
+  display:inline-block;
+  width:100%;
+  height:100%;
+} 
+.isloading{
+   text-align:center;
+ } 
+ 
+

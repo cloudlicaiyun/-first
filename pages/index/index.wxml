@@ -1,0 +1,78 @@
+<!--index.wxml-->
+<view class="container">
+<scroll-view scroll-y="true" style="height:100%;" scroll-top="{{scrollTop}}" bindscrolltolower="loadMore" bindscrolltoupper="upper">
+   <loading hidden="{{user}}"></loading> 
+    <view class="isLoad" wx:if="{{isLoading}}">
+          <view class="aniImg">
+            <image src="../static/images/icon-load.gif"></image> 
+          </view>
+          <view>
+           <text>正在加载中...</text>
+          </view>
+    </view> 
+    <view   class="head"  bindtap="showDialog">
+      ＋我也要许愿 
+    </view>
+    <view class="totop" bindtap="toTop">
+      <image src="../static/images/icon-totop.png"></image>
+    </view>
+    <view>
+        <ul>
+          <li wx:if="{{showWish}}" class="showWish">
+            <view class="img">
+              <image src="{{userInfo.avatarUrl}}" class="headimg"></image>
+              <image src="../static/images/follow.png" class="follow"></image>
+              <view class="self">{{userInfo.nickName}}</view>
+            </view>
+            <view class="tip">
+                <text style="color:#999999;font-family:'楷体';font-weight:normal;">可选择上传图片，表达心愿</text>
+            </view>
+            <view class="loading" >
+              <view class="loadimg" bindtap="chooseimage">
+                <image src="../static/images/icon-loadimg.png"></image>
+              </view>
+              <view class="loadedimg">
+                <image src="{{tempFilePaths}}"></image>
+              </view>
+            </view>
+            <view class="text">
+              <input placeholder-class="input-holder" type="text" maxlength="300" bindinput="inputChange" class="input" placeholder="最想说的愿望"></input>
+            </view>
+            <view>
+              <text wx:if="{{alert}}" style="color:red;padding-left:50rpx;">请留步，还没有说出你的愿望哦</text>
+            </view>
+            <view class="submit">
+              <view>
+                 <text class="edit-submit" bindtap="onConfirm">发送</text>
+              </view>
+             <view>
+                <text class="edit-cancel" bindtap="onCancel">取消</text>
+             </view>
+              
+            </view>
+          </li>
+          <li wx:for="{{user}}">
+            <view class="img">
+              <image src="{{item.img_url}}" class="headimg"></image>
+              <image src="../static/images/follow.png" class="follow"></image>
+              <view class="self">{{item.username}}</view>
+            </view>
+            <view class="text">
+              <text style="word-break: break-all">{{item.wish_content}}</text>
+            </view>
+            <view class="desc" wx:if="{{item.font_img}}">
+              <image src="{{item.font_img}}" mode="aspectFill" lazy-load="true" data-src="{{item.font_img}}" bindtap="previewImage"></image>
+            </view>  
+            <view class="time">
+              <image src="../static/images/time.png"></image>
+              <text>{{item.created}}</text>
+            </view>
+            
+          </li>
+        </ul>
+        <view class="isloading isLoad" hidden="{{!loadingComplete}}">已加载全部</view> 
+    </view>
+  
+</scroll-view>
+</view>
+
